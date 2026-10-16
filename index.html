@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vishv Book Publishers | Work-from-Home Writing Program</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset & Base */
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #111827;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Page Styles & Keyframe Animations */
+    #vbp-landing {
+      --vbp-white: #ffffff;
+      --vbp-black: #111827;
+      --vbp-orange: #ea580c;
+      --vbp-blue: #2563eb;
+      --vbp-muted: #64748b;
+      --vbp-border: #e2e8f0;
+      --vbp-surface: #f8fafc;
+      --vbp-soft-orange: #fff7ed;
+      --vbp-soft-blue: #eff6ff;
+      --vbp-cta: linear-gradient(135deg, var(--vbp-black), var(--vbp-blue) 55%, var(--vbp-orange));
+      --vbp-text: linear-gradient(135deg, var(--vbp-black), var(--vbp-blue) 55%, var(--vbp-orange));
+      --vbp-shadow: 0 16px 45px -20px rgba(17, 24, 39, 0.25);
+      --vbp-glow: 0 8px 30px rgba(234, 88, 12, 0.22);
+      color: var(--vbp-black);
+      background: var(--vbp-white);
+      isolation: isolate;
+      text-align: left;
+      -webkit-font-smoothing: antialiased;
+      width: 100%;
+      font-family: Inter, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      overflow: clip;
+    }
+    #vbp-landing *, #vbp-landing :before, #vbp-landing :after {
+      box-sizing: border-box;
+    }
+    #vbp-landing h1, #vbp-landing h2, #vbp-landing h3, #vbp-landing p, #vbp-landing ul, #vbp-landing blockquote {
+      margin: 0;
+    }
+    #vbp-landing h1, #vbp-landing h2, #vbp-landing h3 {
+      color: var(--vbp-black);
+      letter-spacing: 0;
+      font-family: 'Playfair Display', Georgia, serif;
+      line-height: 1.16;
+    }
+    #vbp-landing a {
+      color: inherit;
+      text-decoration: none;
+    }
+    #vbp-landing img {
+      max-width: 100%;
+      display: block;
+    }
+    #vbp-landing .vbp-container {
+      width: min(100% - 48px, 1200px);
+      margin-inline: auto;
+    }
+    #vbp-landing section[id] {
+      scroll-margin-top: 88px;
+    }
+    #vbp-landing .vbp-header {
+      z-index: 20;
+      background: var(--vbp-white);
+      border-bottom: 1px solid var(--vbp-border);
+      position: sticky;
+      top: 0;
+    }
+    #vbp-landing .vbp-header-inner {
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      min-height: 72px;
+      padding-block: 10px;
+      display: flex;
+    }
+    #vbp-landing .vbp-brand {
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 23px;
+      font-weight: 800;
+      line-height: 1.2;
+      display: flex;
+    }
+    #vbp-landing .vbp-logo {
+      object-fit: cover;
+      border: 2px solid var(--vbp-orange);
+      border-radius: 50%;
+      flex-shrink: 0;
+      width: 42px;
+      height: 42px;
+    }
+    #vbp-landing .vbp-gradient {
+      background: var(--vbp-text);
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+    #vbp-landing .vbp-button {
+      background: var(--vbp-cta);
+      color: var(--vbp-white);
+      text-align: center;
+      box-shadow: var(--vbp-glow);
+      border: 1px solid transparent;
+      border-radius: 999px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 24px;
+      font-family: Inter, Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.4;
+      transition: transform .2s, box-shadow .2s;
+      display: inline-flex;
+      cursor: pointer;
+    }
+    #vbp-landing .vbp-button:hover {
+      box-shadow: var(--vbp-shadow);
+      transform: translateY(-3px);
+    }
+    #vbp-landing a:focus-visible, #vbp-landing summary:focus-visible {
+      outline: 3px solid var(--vbp-blue);
+      outline-offset: 4px;
+    }
+    #vbp-landing .vbp-button-small {
+      flex-shrink: 0;
+      padding: 10px 18px;
+      font-size: 13px;
+    }
+    #vbp-landing .vbp-button-outline {
+      background: var(--vbp-white);
+      color: var(--vbp-black);
+      border-color: var(--vbp-border);
+      box-shadow: none;
+    }
+    #vbp-landing .vbp-button-black {
+      background: var(--vbp-black);
+      box-shadow: none;
+    }
+    #vbp-landing .vbp-send {
+      fill: currentColor;
+      flex-shrink: 0;
+      width: 19px;
+      height: 19px;
+    }
+    #vbp-landing .vbp-hero {
+      background: linear-gradient(125deg, var(--vbp-soft-orange), var(--vbp-white) 48%, var(--vbp-soft-blue));
+      padding: 68px 0 90px;
+    }
+    #vbp-landing .vbp-hero-grid {
+      grid-template-columns: 1.15fr 1fr;
+      align-items: center;
+      gap: 52px;
+      display: grid;
+    }
+    #vbp-landing .vbp-badge {
+      border: 1px solid var(--vbp-border);
+      background: var(--vbp-white);
+      border-radius: 999px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1.5;
+      display: inline-flex;
+    }
+    #vbp-landing .vbp-live {
+      color: var(--vbp-orange);
+      font-size: 10px;
+    }
+    #vbp-landing .vbp-hero h1 {
+      overflow-wrap: break-word;
+      margin-top: 22px;
+      font-size: 56px;
+      font-weight: 800;
+    }
+    #vbp-landing .vbp-hero-copy {
+      color: var(--vbp-muted);
+      max-width: 570px;
+      margin-top: 26px;
+      font-size: 17px;
+    }
+    #vbp-landing .vbp-actions {
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+      display: flex;
+    }
+    #vbp-landing .vbp-assurances {
+      color: var(--vbp-muted);
+      flex-wrap: wrap;
+      gap: 12px 20px;
+      margin-top: 24px;
+      font-size: 12px;
+      display: flex;
+    }
+    #vbp-landing .vbp-check {
+      color: var(--vbp-orange);
+      margin-right: 5px;
+      font-weight: 800;
+    }
+    #vbp-landing .vbp-social {
+      color: var(--vbp-muted);
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin-top: 24px;
+      font-size: 12px;
+      display: flex;
+    }
+    #vbp-landing .vbp-avatars {
+      padding-left: 6px;
+      display: flex;
+    }
+    #vbp-landing .vbp-avatar {
+      border: 2px solid var(--vbp-white);
+      width: 34px;
+      height: 34px;
+      color: var(--vbp-white);
+      background: var(--vbp-cta);
+      border-radius: 50%;
+      flex-shrink: 0;
+      place-items: center;
+      margin-left: -6px;
+      font-size: 10px;
+      font-weight: 800;
+      display: grid;
+    }
+    #vbp-landing .vbp-visual {
+      aspect-ratio: 1;
+      width: 100%;
+      max-width: 470px;
+      margin-inline: auto;
+      position: relative;
+    }
+    #vbp-landing .vbp-hero-image {
+      object-fit: cover;
+      border: 3px solid var(--vbp-orange);
+      width: 100%;
+      height: 100%;
+      box-shadow: var(--vbp-shadow);
+      border-radius: 28px;
+    }
+    #vbp-landing .vbp-floating {
+      border: 1px solid var(--vbp-border);
+      background: var(--vbp-white);
+      box-shadow: var(--vbp-shadow);
+      border-radius: 12px;
+      padding: 11px 14px;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.5;
+      animation: 5s ease-in-out infinite vbp-float;
+      position: absolute;
+    }
+    #vbp-landing .vbp-floating small {
+      color: var(--vbp-muted);
+      font-size: 10px;
+      font-weight: 500;
+      display: block;
+    }
+    #vbp-landing .vbp-payment {
+      top: 45px;
+      left: -15px;
+    }
+    #vbp-landing .vbp-rating {
+      animation-delay: 1s;
+      bottom: 44px;
+      right: -10px;
+    }
+    #vbp-landing .vbp-paid {
+      color: var(--vbp-white);
+      background: var(--vbp-cta);
+      border: 0;
+      border-radius: 999px;
+      font-size: 10px;
+      top: 13px;
+      right: 12px;
+    }
+    #vbp-landing .vbp-coin {
+      object-fit: contain;
+      width: 48px;
+      height: 48px;
+      animation: 4s ease-in-out infinite vbp-float;
+      position: absolute;
+      bottom: 22px;
+      left: 15px;
+    }
+    #vbp-landing .vbp-stats {
+      margin-top: -36px;
+      padding-bottom: 36px;
+      position: relative;
+    }
+    #vbp-landing .vbp-stats-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      display: grid;
+    }
+    #vbp-landing .vbp-stat {
+      background: var(--vbp-white);
+      border: 1px solid var(--vbp-border);
+      text-align: center;
+      box-shadow: var(--vbp-shadow);
+      border-radius: 16px;
+      padding: 22px 12px;
+    }
+    #vbp-landing .vbp-stat strong {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 34px;
+      line-height: 1.3;
+      display: block;
+    }
+    #vbp-landing .vbp-stat span {
+      color: var(--vbp-muted);
+      margin-top: 5px;
+      font-size: 12px;
+      display: block;
+    }
+    #vbp-landing .vbp-marquee {
+      border-block: 1px solid var(--vbp-border);
+      background: var(--vbp-surface);
+      padding: 15px 0;
+      overflow: hidden;
+    }
+    #vbp-landing .vbp-marquee-track {
+      width: max-content;
+      animation: 32s linear infinite vbp-marquee;
+      display: flex;
+    }
+    #vbp-landing .vbp-marquee-group {
+      white-space: nowrap;
+      color: var(--vbp-muted);
+      align-items: center;
+      gap: 38px;
+      padding-right: 38px;
+      font-size: 13px;
+      display: flex;
+    }
+    #vbp-landing .vbp-section {
+      padding: 88px 0;
+    }
+    #vbp-landing .vbp-section-alt {
+      background: var(--vbp-surface);
+    }
+    #vbp-landing .vbp-heading {
+      text-align: center;
+      max-width: 700px;
+      margin-inline: auto;
+    }
+    #vbp-landing .vbp-eyebrow {
+      color: var(--vbp-orange);
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 800;
+    }
+    #vbp-landing .vbp-heading h2 {
+      margin-top: 13px;
+      font-size: 43px;
+      font-weight: 800;
+    }
+    #vbp-landing .vbp-heading p {
+      color: var(--vbp-muted);
+      margin-top: 16px;
+      font-size: 15px;
+    }
+    #vbp-landing .vbp-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+      display: grid;
+    }
+    #vbp-landing .vbp-card {
+      border: 1px solid var(--vbp-border);
+      background: var(--vbp-white);
+      border-radius: 20px;
+      min-width: 0;
+      padding: 28px;
+      transition: transform .25s, box-shadow .25s, border-color .25s;
+      position: relative;
+    }
+    #vbp-landing .vbp-card:hover {
+      border-color: var(--vbp-orange);
+      box-shadow: var(--vbp-glow);
+      transform: translateY(-5px);
+    }
+    #vbp-landing .vbp-icon {
+      background: var(--vbp-cta);
+      width: 56px;
+      height: 56px;
+      color: var(--vbp-white);
+      border-radius: 14px;
+      place-items: center;
+      font-size: 26px;
+      line-height: 1;
+      display: grid;
+    }
+    #vbp-landing .vbp-card h3 {
+      margin-top: 20px;
+      font-size: 22px;
+    }
+    #vbp-landing .vbp-card p {
+      color: var(--vbp-muted);
+      margin-top: 12px;
+      font-size: 14px;
+    }
+    #vbp-landing .vbp-step {
+      background: var(--vbp-cta);
+      color: var(--vbp-white);
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-size: 10px;
+      font-weight: 800;
+      position: absolute;
+      top: -12px;
+      left: 28px;
+    }
+    #vbp-landing .vbp-card-foot {
+      border-top: 1px solid var(--vbp-border);
+      color: var(--vbp-muted);
+      text-transform: uppercase;
+      margin-top: 23px;
+      padding-top: 16px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    #vbp-landing .vbp-plan {
+      flex-direction: column;
+      display: flex;
+    }
+    #vbp-landing .vbp-plan h3 {
+      margin-top: 0;
+    }
+    #vbp-landing .vbp-plan-popular {
+      border: 2px solid var(--vbp-orange);
+      box-shadow: var(--vbp-glow);
+    }
+    #vbp-landing .vbp-popular-tag {
+      background: var(--vbp-cta);
+      color: var(--vbp-white);
+      white-space: nowrap;
+      border-radius: 999px;
+      padding: 5px 15px;
+      font-size: 10px;
+      font-weight: 800;
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translate(-50%);
+    }
+    #vbp-landing .vbp-price {
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 7px;
+      margin-top: 16px;
+      display: flex;
+    }
+    #vbp-landing .vbp-price strong {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 43px;
+      line-height: 1.2;
+    }
+    #vbp-landing .vbp-price span {
+      color: var(--vbp-muted);
+      font-size: 12px;
+    }
+    #vbp-landing .vbp-plan-list {
+      border-top: 1px solid var(--vbp-border);
+      flex: 1;
+      margin-top: 20px;
+      padding: 22px 0;
+      list-style: none;
+    }
+    #vbp-landing .vbp-plan-list li {
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+      font-size: 13px;
+      display: flex;
+    }
+    #vbp-landing .vbp-plan-list li:before {
+      content: "✓";
+      color: var(--vbp-orange);
+      flex-shrink: 0;
+      font-weight: 800;
+    }
+    #vbp-landing .vbp-plan .vbp-button {
+      width: 100%;
+    }
+    #vbp-landing .vbp-note {
+      text-align: center;
+      color: var(--vbp-muted);
+      margin-top: 32px;
+      font-size: 12px;
+    }
+    #vbp-landing .vbp-stars {
+      color: var(--vbp-orange);
+      font-size: 19px;
+    }
+    #vbp-landing .vbp-review-score {
+      background: var(--vbp-white);
+      border: 1px solid var(--vbp-border);
+      border-radius: 999px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
+      margin-top: 22px;
+      padding: 8px 15px;
+      font-size: 12px;
+      display: inline-flex;
+    }
+    #vbp-landing .vbp-review blockquote {
+      margin-top: 16px;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    #vbp-landing .vbp-member {
+      border-top: 1px solid var(--vbp-border);
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin-top: 24px;
+      padding-top: 20px;
+      display: flex;
+    }
+    #vbp-landing .vbp-member .vbp-avatar {
+      width: 44px;
+      height: 44px;
+      margin: 0;
+      font-size: 13px;
+    }
+    #vbp-landing .vbp-member-info {
+      flex: 1;
+      min-width: 100px;
+      font-size: 13px;
+    }
+    #vbp-landing .vbp-member-info small {
+      color: var(--vbp-muted);
+      font-size: 11px;
+      display: block;
+    }
+    #vbp-landing .vbp-earned {
+      color: var(--vbp-blue);
+      font-size: 12px;
+      font-weight: 800;
+    }
+    #vbp-landing .vbp-faq {
+      max-width: 780px;
+      margin: 38px auto 0;
+    }
+    #vbp-landing .vbp-faq details {
+      border: 1px solid var(--vbp-border);
+      background: var(--vbp-white);
+      border-radius: 12px;
+      margin-bottom: 12px;
+      padding: 0 22px;
+    }
+    #vbp-landing .vbp-faq details[open] {
+      border-color: var(--vbp-orange);
+      box-shadow: var(--vbp-glow);
+    }
+    #vbp-landing .vbp-faq summary {
+      cursor: pointer;
+      padding: 20px 28px 20px 0;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.5;
+      list-style: none;
+      position: relative;
+    }
+    #vbp-landing .vbp-faq summary::-webkit-details-marker {
+      display: none;
+    }
+    #vbp-landing .vbp-faq summary:after {
+      content: "+";
+      color: var(--vbp-orange);
+      font-family: Inter, Arial, sans-serif;
+      font-size: 24px;
+      position: absolute;
+      top: 17px;
+      right: 0;
+    }
+    #vbp-landing .vbp-faq details[open] summary:after {
+      content: "−";
+    }
+    #vbp-landing .vbp-faq details p {
+      color: var(--vbp-muted);
+      padding-bottom: 20px;
+      font-size: 14px;
+    }
+    #vbp-landing .vbp-final {
+      background: linear-gradient(125deg, var(--vbp-soft-blue), var(--vbp-white) 45%, var(--vbp-soft-orange));
+      text-align: center;
+      padding: 88px 0;
+    }
+    #vbp-landing .vbp-final-inner {
+      max-width: 760px;
+      margin-inline: auto;
+    }
+    #vbp-landing .vbp-final h2 {
+      margin-top: 20px;
+      font-size: 50px;
+    }
+    #vbp-landing .vbp-final p {
+      color: var(--vbp-muted);
+      margin-top: 20px;
+    }
+    #vbp-landing .vbp-final .vbp-button {
+      margin-top: 32px;
+      padding: 18px 30px;
+      font-size: 17px;
+    }
+    #vbp-landing .vbp-final .vbp-note {
+      margin-top: 14px;
+      font-size: 12px;
+    }
+    #vbp-landing .vbp-final .vbp-assurances {
+      justify-content: center;
+      margin-top: 28px;
+      font-size: 13px;
+    }
+    #vbp-landing .vbp-footer {
+      border-top: 1px solid var(--vbp-border);
+      color: var(--vbp-muted);
+      padding: 25px 0;
+      font-size: 12px;
+    }
+    #vbp-landing .vbp-footer-inner {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      display: flex;
+    }
+    #vbp-landing .vbp-footer-links {
+      flex-wrap: wrap;
+      gap: 20px;
+      display: flex;
+    }
+    #vbp-landing .vbp-footer-links a:hover {
+      color: var(--vbp-orange);
+    }
+
+    /* Keyframes */
+    @keyframes vbp-float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-9px); }
+    }
+    @keyframes vbp-marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* Responsiveness */
+    @media (max-width: 1000px) {
+      #vbp-landing .vbp-hero-grid {
+        text-align: center;
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      #vbp-landing .vbp-hero h1 {
+        font-size: 49px;
+      }
+      #vbp-landing .vbp-hero-copy {
+        margin-inline: auto;
+      }
+      #vbp-landing .vbp-actions, #vbp-landing .vbp-assurances, #vbp-landing .vbp-social {
+        justify-content: center;
+      }
+      #vbp-landing .vbp-visual {
+        max-width: 440px;
+      }
+      #vbp-landing .vbp-card {
+        padding: 24px;
+      }
+      #vbp-landing .vbp-price strong {
+        font-size: 35px;
+      }
+    }
+    @media (max-width: 760px) {
+      #vbp-landing .vbp-container {
+        width: min(100% - 32px, 1200px);
+      }
+      #vbp-landing .vbp-brand {
+        font-size: 18px;
+      }
+      #vbp-landing .vbp-logo {
+        width: 36px;
+        height: 36px;
+      }
+      #vbp-landing .vbp-header-inner {
+        min-height: 64px;
+      }
+      #vbp-landing .vbp-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+      #vbp-landing .vbp-features {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      #vbp-landing .vbp-stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+      #vbp-landing .vbp-section {
+        padding: 62px 0;
+      }
+      #vbp-landing .vbp-heading h2 {
+        font-size: 35px;
+      }
+      #vbp-landing .vbp-final h2 {
+        font-size: 40px;
+      }
+      #vbp-landing .vbp-final {
+        padding: 62px 0;
+      }
+      #vbp-landing .vbp-price strong {
+        font-size: 43px;
+      }
+      #vbp-landing .vbp-footer-inner {
+        text-align: center;
+        justify-content: center;
+      }
+    }
+    @media (max-width: 480px) {
+      #vbp-landing .vbp-brand {
+        gap: 7px;
+        font-size: 15px;
+      }
+      #vbp-landing .vbp-button-small {
+        padding: 9px 12px;
+        font-size: 12px;
+      }
+      #vbp-landing .vbp-header-inner {
+        gap: 8px;
+      }
+      #vbp-landing .vbp-hero {
+        padding: 40px 0 70px;
+      }
+      #vbp-landing .vbp-hero h1 {
+        font-size: 37px;
+      }
+      #vbp-landing .vbp-hero-copy {
+        font-size: 15px;
+      }
+      #vbp-landing .vbp-actions {
+        flex-direction: column;
+        align-items: center;
+      }
+      #vbp-landing .vbp-actions .vbp-button {
+        width: 100%;
+        max-width: 350px;
+      }
+      #vbp-landing .vbp-features {
+        grid-template-columns: 1fr;
+      }
+      #vbp-landing .vbp-heading h2 {
+        font-size: 31px;
+      }
+      #vbp-landing .vbp-stat strong {
+        font-size: 28px;
+      }
+      #vbp-landing .vbp-floating {
+        padding: 9px 10px;
+        font-size: 10px;
+      }
+      #vbp-landing .vbp-payment {
+        top: 45px;
+        left: 5px;
+      }
+      #vbp-landing .vbp-rating {
+        bottom: 25px;
+        right: 5px;
+      }
+      #vbp-landing .vbp-final h2 {
+        font-size: 35px;
+      }
+      #vbp-landing .vbp-final .vbp-button {
+        padding: 16px 20px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div id="vbp-landing">
+  <!-- Header -->
+  <header class="vbp-header">
+    <div class="vbp-container vbp-header-inner">
+      <a class="vbp-brand" href="#vbp-top">
+        <img class="vbp-logo" src="https://vishavbookhearti.lovable.app/__l5e/assets-v1/ede4ee1f-720b-4e54-93af-71dec452ad56/logo.jpeg" alt="Vishv Book Publishers logo" width="42" height="42"/>
+        <span>Vishv <span class="vbp-gradient">Book</span> Publishers</span>
+      </a>
+      <a class="vbp-button vbp-button-small" href="https://t.me/+gVR_cFCOwQsyOTVl" target="_blank" rel="noopener noreferrer">
+        <svg class="vbp-send" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21.8 2.3 2.5 9.7c-1.3.5-1.3 1.2-.2 1.6l5 1.6 1.9 5.8c.2.7.4.9.8.9.3 0 .5-.1.8-.4l2.8-2.7 5.2 3.8c1 .6 1.7.3 2-.9l3.1-15c.4-1.5-.5-2.2-2.1-1.6ZM9 12.5 19.5 6c.5-.3.9-.1.5.2l-8.7 7.9-.3 3.1-2-4.7Z"></path>
+        </svg>
+        Join Telegram Channel
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="vbp-top" class="vbp-hero">
+    <div class="vbp-container vbp-hero-grid">
+      <div>
+        <div class="vbp-badge">
+          <span aria-hidden="true">✦</span>India's #1 Work-from-Home Writing Program<span class="vbp-live">● LIVE</span>
+        </div>
+        <h1>Earn <span class="vbp-gradient">₹22,000–₹45,000</span><br/>Writing from Home</h1>
+        <p class="vbp-hero-copy">No office. No experience required. Join 15,000+ Indians earning weekly by handwriting books from the comfort of their home. Get paid in 24 hours.</p>
+        <div class="vbp-actions">
+          <a class="vbp-button" href="https://t.me/+gVR_cFCOwQsyOTVl" target="_blank" rel="noopener noreferrer">
+            <svg class="vbp-send" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21.8 2.3 2.5 9.7c-1.3.5-1.3 1.2-.2 1.6l5 1.6 1.9 5.8c.2.7.4.9.8.9.3 0 .5-.1.8-.4l2.8-2.7 5.2 3.8c1 .6 1.7.3 2-.9l3.1-15c.4-1.5-.5-2.2-2.1-1.6ZM9 12.5 19.5 6c.5-.3.9-.1.5.2l-8.7 7.9-.3 3.1-2-4.7Z"></path>
+            </svg>
+            Join Telegram Channel <span aria-hidden="true">→</span>
+          </a>
+          <a class="vbp-button vbp-button-outline" href="#vbp-how">See how it works <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="vbp-assurances">
+          <span><span class="vbp-check">✓</span>No Credit Card</span>
+          <span><span class="vbp-check">✓</span>100% Refundable</span>
+          <span><span class="vbp-check">ϟ</span>Paid in 24 Hours</span>
+        </div>
+        <div class="vbp-social">
+          <div class="vbp-avatars" aria-hidden="true">
+            <span class="vbp-avatar">PS</span>
+            <span class="vbp-avatar">RV</span>
+            <span class="vbp-avatar">SD</span>
+            <span class="vbp-avatar">AK</span>
+          </div>
+          <span><strong>15,000+</strong> writers joined this month</span>
+        </div>
+      </div>
+      <div class="vbp-visual">
+        <img class="vbp-hero-image" src="https://vishavbookhearti.lovable.app/__l5e/assets-v1/4f07cc5a-bec0-42f7-9a83-86881bee406e/hero-writer.jpg" alt="Woman writing from home with Vishv Book Publishers" width="1024" height="1024"/>
+        <div class="vbp-floating vbp-payment">
+          <small>Just now</small>
+          <span class="vbp-check">ϟ</span>Paid ₹30,000 to Priya
+        </div>
+        <div class="vbp-floating vbp-rating">
+          <span class="vbp-stars">★</span> 4.8 / 5
+          <small>12,400 reviews</small>
+        </div>
+        <div class="vbp-floating vbp-paid">₹2.5 Cr+ paid</div>
+        <img class="vbp-coin" src="https://vishavbookhearti.lovable.app/__l5e/assets-v1/5f38e4b6-5125-4b77-a01b-077fbedf3f91/rupee-coin.png" alt="Rupee coin" width="48" height="48" loading="lazy"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics -->
+  <section class="vbp-stats" aria-label="Program statistics">
+    <div class="vbp-container vbp-stats-grid">
+      <div class="vbp-stat">
+        <strong class="vbp-gradient">15,000+</strong>
+        <span>Active Members</span>
+      </div>
+      <div class="vbp-stat">
+        <strong class="vbp-gradient">₹2.5 Cr+</strong>
+        <span>Total Paid Out</span>
+      </div>
+      <div class="vbp-stat">
+        <strong class="vbp-gradient">4.8★</strong>
+        <span>Average Rating</span>
+      </div>
+      <div class="vbp-stat">
+        <strong class="vbp-gradient">24 hrs</strong>
+        <span>Payment Speed</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Infinite Marquee Bar -->
+  <div class="vbp-marquee">
+    <div class="vbp-marquee-track">
+      <div class="vbp-marquee-group">
+        <span>✓ Trusted in 19,000+ pincodes</span>
+        <span>🚚 BlueDart Verified</span>
+        <span>📦 Delhivery Partner</span>
+        <span>💳 UPI Verified Payouts</span>
+        <span>🔒 Secure &amp; Refundable</span>
+        <span>⭐ 4.8 / 5 by 12,400 members</span>
+        <span>🇮🇳 Made in India</span>
+      </div>
+      <div class="vbp-marquee-group" aria-hidden="true">
+        <span>✓ Trusted in 19,000+ pincodes</span>
+        <span>🚚 BlueDart Verified</span>
+        <span>📦 Delhivery Partner</span>
+        <span>💳 UPI Verified Payouts</span>
+        <span>🔒 Secure &amp; Refundable</span>
+        <span>⭐ 4.8 / 5 by 12,400 members</span>
+        <span>🇮🇳 Made in India</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- How it Works -->
+  <section id="vbp-how" class="vbp-section">
+    <div class="vbp-container">
+      <div class="vbp-heading">
+        <span class="vbp-eyebrow">How it works</span>
+        <h2>Start earning in <span class="vbp-gradient">3 simple steps</span></h2>
+        <p>From joining to your first payout — the whole process is designed for beginners.</p>
+      </div>
+      <div class="vbp-grid">
+        <article class="vbp-card">
+          <span class="vbp-step">STEP 01</span>
+          <div class="vbp-icon" aria-hidden="true">✉</div>
+          <h3>Join Our Telegram Channel</h3>
+          <p>Click the link, join our official Telegram channel and read the welcome guide. It's 100% free.</p>
+          <div class="vbp-card-foot">Takes 30 seconds</div>
+        </article>
+        <article class="vbp-card">
+          <span class="vbp-step">STEP 02</span>
+          <div class="vbp-icon" aria-hidden="true">▣</div>
+          <h3>Register &amp; Receive Material</h3>
+          <p>Pick a project plan, complete a small refundable registration, and we courier the writing material to your home.</p>
+          <div class="vbp-card-foot">Free home delivery</div>
+        </article>
+        <article class="vbp-card">
+          <span class="vbp-step">STEP 03</span>
+          <div class="vbp-icon" aria-hidden="true">₹</div>
+          <h3>Submit &amp; Get Paid</h3>
+          <p>Handwrite the pages at your own pace, ship them back, and receive your full payment within 24 hours.</p>
+          <div class="vbp-card-foot">Paid in 24 hours</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plans -->
+  <section id="vbp-plans" class="vbp-section vbp-section-alt">
+    <div class="vbp-container">
+      <div class="vbp-heading">
+        <span class="vbp-eyebrow">Project Plans</span>
+        <h2>Choose your <span class="vbp-gradient">earning level</span></h2>
+        <p>Pick a plan that matches your time and earning goal. Upgrade anytime.</p>
+      </div>
+      <div class="vbp-grid">
+        <article class="vbp-card vbp-plan">
+          <h3>Starter Plan</h3>
+          <div class="vbp-price">
+            <strong class="vbp-gradient">₹22,000</strong>
+            <span>payout</span>
+          </div>
+          <p>200 pages · 30 days to complete</p>
+          <ul class="vbp-plan-list">
+            <li>Beginner friendly</li>
+            <li>Free home delivery</li>
+            <li>24 hr payout</li>
+            <li>Refundable registration</li>
+          </ul>
+          <a class="vbp-button vbp-button-black" href="https://t.me/+gVR_cFCOwQsyOTVl" target="_blank" rel="noopener noreferrer">
+            Join Telegram Channel <span aria-hidden="true">→</span>
+          </a>
+        </article>
+        <article class="vbp-card vbp-plan vbp-plan-popular">
+          <span class="vbp-popular-tag">✦ MOST POPULAR</span>
+          <h3>Standard Plan</h3>
+          <div class="vbp-price">
+            <strong class="vbp-gradient">₹30,000</strong>
+            <span>payout</span>
+          </div>
+          <p>300 pages · 45 days to complete</p>
+          <ul class="vbp-plan-list">
+            <li>Most chosen plan</li>
+            <li>Priority shipping</li>
+            <li>24 hr payout</li>
+            <li>Dedicated support agent</li>
+            <li>Bonus ₹2,000 on completion</li>
+          </ul>
+          <a class="vbp-button" href="https://t.me/+gVR_cFCOwQsyOTVl" target="_blank" rel="noopener noreferrer">
+            Join Telegram Channel <span aria-hidden="true">→</span>
+          </a>
+        </article>
+        <article class="vbp-card vbp-plan">
+          <h3>Premium Plan</h3>
+          <div class="vbp-price">
+            <strong class="vbp-gradient">₹45,000</strong>
+            <span>payout</span>
+          </div>
+          <p>450 pages · 60 days to complete</p>
+          <ul class="vbp-plan-list">
+            <li>Highest payout</li>
+            <li>Priority shipping</li>
+            <li>24 hr payout</li>
+            <li>1-on-1 mentor</li>
+            <li>Bonus ₹5,000 on completion</li>
+          </ul>
+          <a class="vbp-button vbp-button-black" href="https://t.me/+gVR_cFCOwQsyOTVl" target="_blank" rel="noopener noreferrer">
+            Join Telegram Channel <span aria-hidden="true">→</span>
+          </a>
+        </article>
+      </div>
+      <p class="vbp-note">🔒 100% refundable registration · 🚚 Free home delivery across India · 💳 Direct UPI / bank transfer</p>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="vbp-section">
+    <div class="vbp-container">
+      <div class="vbp-heading">
+        <span class="vbp-eyebrow">Why Choose Us</span>
+        <h2>Built for <span class="vbp-gradient">real Indian families</span></h2>
+        <p>Everything you need to start earning from day one — backed by a real team that cares.</p>
+      </div>
+      <div class="vbp-grid vbp-features">
+        <article class="vbp-card">
+          <div class="vbp-icon" aria-hidden="true">⌂</div>
+          <h3>Work From Anywhere</h3>
+          <p>Any city, any village. All you need is a pen and paper.</p>
+        </article>
+        <article class="vbp-card">
+          <div class="vbp-icon" aria-hidden="true">₹</div>
+          <h3>Guaranteed Salary</h3>
+          <p>Submit your work and receive guaranteed payout in 24 hours.</p>
+        </article>
+        <article class="vbp-card">
+          <div class="vbp-icon" aria-hidden="true">◷</div>
+          <h3>Flexible Timing</h3>
+          <p>Write at your own pace — mornings, nights, weekends. Your choice.</p>
+        </article>
+        <article class="vbp-card">
+          <div class="vbp-icon" aria-hidden="true">✓</div>
+          <h3>Secure Payments</h3>
+          <p>100% refundable registration. Direct UPI / bank transfer.</p>
+        </article>
+        <article class="vbp-card">
+          <div class="vbp-icon" aria-hidden="true">☎</div>
+          <h3>24/7 Support</h3>
+          <p>Dedicated team to guide you on Telegram, WhatsApp &amp; calls.</p>
+        </article>
+        <article class="vbp-card">
+          <div class="vbp-icon" aria-hidden="true">★</div>
+          <h3>Trusted by 15,000+</h3>
+          <p>India's most reviewed work-from-home writing program since 2019.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="vbp-section vbp-section-alt">
+    <div class="vbp-container">
+      <div class="vbp-heading">
+        <span class="vbp-eyebrow">Member Stories</span>
+        <h2>Real people, <span class="vbp-gradient">real payouts</span></h2>
+        <div class="vbp-review-score">
+          <span class="vbp-stars" aria-label="Five stars">★★★★★</span>
+          <strong>4.8</strong>
+          <span>from 12,400 verified members</span>
+        </div>
+      </div>
+      <div class="vbp-grid">
+        <article class="vbp-card vbp-review">
+          <div class="vbp-stars" aria-label="Five stars">★★★★★</div>
+          <blockquote>“I was a homemaker with no income source. In my very first month with Vishv Book Publishers, I earned ₹30,000. The team guided me at every step.”</blockquote>
+          <div class="vbp-member">
+            <span class="vbp-avatar" aria-hidden="true">PS</span>
+            <div class="vbp-member-info">
+              <strong>Priya Sharma</strong>
+              <small>Jaipur, Rajasthan</small>
+            </div>
+            <span class="vbp-earned">₹30,000</span>
+          </div>
+        </article>
+        <article class="vbp-card vbp-review">
+          <div class="vbp-stars" aria-label="Five stars">★★★★★</div>
+          <blockquote>“I'm a college student. I completed the Premium Plan in 45 days and earned ₹45,000 + ₹5,000 bonus. Payment came in 22 hours!”</blockquote>
+          <div class="vbp-member">
+            <span class="vbp-avatar" aria-hidden="true">RV</span>
+            <div class="vbp-member-info">
+              <strong>Rahul Verma</strong>
+              <small>Lucknow, UP</small>
+            </div>
+            <span class="vbp-earned">₹45,000</span>
+          </div>
+        </article>
+        <article class="vbp-card vbp-review">
+          <div class="vbp-stars" aria-label="Five stars">★★★★★</div>
+          <blockquote>“No interview, no exam. They sent the books home, I wrote, sent them back, and money came in my bank account. Simple and trustworthy.”</blockquote>
+          <div class="vbp-member">
+            <span class="vbp-avatar" aria-hidden="true">SD</span>
+            <div class="vbp-member-info">
+              <strong>Sunita Devi</strong>
+              <small>Patna, Bihar</small>
+            </div>
+            <span class="vbp-earned">₹22,000</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="vbp-faq" class="vbp-section">
+    <div class="vbp-container">
+      <div class="vbp-heading">
+        <span class="vbp-eyebrow">FAQ</span>
+        <h2>Got <span class="vbp-gradient">questions?</span></h2>
+      </div>
+      <div class="vbp-faq">
+        <details name="vbp-faq">
+          <summary>Do I need any experience or qualification?</summary>
+          <p>Not at all. Anyone who can write neatly in any Indian language or English can join. We provide complete instructions with the material.</p>
+        </details>
+        <details name="vbp-faq">
+          <summary>Is the registration fee really refundable?</summary>
+          <p>Yes. The registration is a one-time refundable security that is returned to you in full once you complete your project successfully.</p>
+        </details>
+        <details name="vbp-faq">
+          <summary>How will I receive my payment?</summary>
+          <p>Payments are sent directly to your UPI / bank account within 24 hours of us receiving your completed work.</p>
+        </details>
+        <details name="vbp-faq">
+          <summary>How will the writing material reach me?</summary>
+          <p>We courier the books and instructions to your home address using BlueDart / Delhivery. You'll receive a tracking number.</p>
+        </details>
+        <details name="vbp-faq">
+          <summary>Can I work from a small town or village?</summary>
+          <p>Absolutely. We deliver to 19,000+ pincodes across India. As long as a courier reaches your area, you can earn with us.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="vbp-final">
+    <div class="vbp-container">
+      <div class="vbp-final-inner">
+        <div class="vbp-badge">✦ Limited slots open this week</div>
+        <h2>Ready to <span class="vbp-gradient">earn this week?</span></h2>
+        <p>Join 15,000+ Indians already earning from home. Click below, join our Telegram and start your first project today.</p>
+        <a class="vbp-button" href="https://t.me/+gVR_cFCOwQsyOTVl" target="_blank" rel="noopener noreferrer">
+          <svg class="vbp-send" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21.8 2.3 2.5 9.7c-1.3.5-1.3 1.2-.2 1.6l5 1.6 1.9 5.8c.2.7.4.9.8.9.3 0 .5-.1.8-.4l2.8-2.7 5.2 3.8c1 .6 1.7.3 2-.9l3.1-15c.4-1.5-.5-2.2-2.1-1.6ZM9 12.5 19.5 6c.5-.3.9-.1.5.2l-8.7 7.9-.3 3.1-2-4.7Z"></path>
+          </svg>
+          Join Telegram Channel <span aria-hidden="true">→</span>
+        </a>
+        <p class="vbp-note">⚡ Instant access · No signup form · Free forever</p>
+        <div class="vbp-assurances">
+          <span><span class="vbp-check">✓</span>No Credit Card</span>
+          <span><span class="vbp-check">✓</span>100% Refundable</span>
+          <span><span class="vbp-check">ϟ</span>Paid in 24 Hours</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="vbp-footer">
+    <div class="vbp-container vbp-footer-inner">
+      <p>© 2026 Vishv Book Publishers. All rights reserved.</p>
+      <nav class="vbp-footer-links" aria-label="Footer">
+        <a aria-label="Privacy policy" href="#">Privacy</a>
+        <a href="#" aria-label="Terms and conditions">Terms</a>
+        <a href="https://t.me/+gVR_cFCOwQsyOTVl" target="_blank" rel="noopener noreferrer">Telegram Channel</a>
+      </nav>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>
